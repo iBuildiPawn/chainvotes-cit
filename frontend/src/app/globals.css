@@ -1,0 +1,528 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Enhanced Black and Yellow Theme */
+:root {
+  /* Core colors */
+  --background: #0f0f0f;
+  --foreground: #ffffff;
+  --primary: #ffc107;
+  --primary-foreground: #000000;
+
+  /* Button text colors */
+  --btn-text-primary: #000000;
+  --btn-text-secondary: #ffc107;
+  --btn-text-outline: #ffc107;
+  --btn-text-ghost: #ffc107;
+  --btn-text-destructive: #ffffff;
+  --btn-text-link: #ffc107;
+
+  /* Secondary colors */
+  --secondary: #2a2a2a;
+  --secondary-foreground: #ffffff;
+
+  /* Accent colors */
+  --accent: #ffc107;
+  --accent-foreground: #0f0f0f;
+  --accent-muted: #ffd54f;
+
+  /* UI elements */
+  --muted: #1e1e1e;
+  --muted-foreground: #adb5bd;
+  --border: #303030;
+  --divider: #2a2a2a;
+
+  /* Form elements */
+  --input-background: #1a1a1a;
+  --input-foreground: #ffffff;
+  --input-border: #383838;
+  --input-ring: #ffc107;
+  --form-background: #1a1a1a;
+  --form-foreground: #ffffff;
+
+  /* Card elements */
+  --card-background: #1a1a1a;
+  --card-foreground: #ffffff;
+  --card-muted: #252525;
+  --card-border: #303030;
+  --hover-background: #252525;
+
+  /* Menu elements */
+  --menu-background: #1a1a1a;
+  --menu-foreground: #ffffff;
+  --menu-border: #303030;
+  --menu-hover: #252525;
+
+  /* Tooltip & overlay elements */
+  --tooltip-background: #1a1a1a;
+  --tooltip-foreground: #ffffff;
+  --tooltip-border: #303030;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --shadow-color-darker: rgba(0, 0, 0, 0.7);
+
+  /* Status colors */
+  --success: #4caf50;
+  --info: #0288d1;
+  --warning: #ff9800;
+  --error: #f44336;
+}
+
+/* Base styles */
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-inter), Arial, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+/* Layout improvements */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+/* Consistent spacing */
+.spacing-y-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.spacing-y-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.spacing-y-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.spacing-y-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Enhanced card styling */
+.card {
+  background-color: var(--card-background);
+  border: 1px solid var(--card-border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Form styling with better contrast */
+input,
+textarea,
+select {
+  color: var(--foreground) !important;
+  background-color: var(--input-background) !important;
+  border: 2px solid var(--input-border) !important;
+  transition: all 0.2s ease-in-out;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: var(--primary) !important;
+  background-color: var(--hover-background) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px var(--primary) !important;
+  background-color: var(--input-background) !important;
+}
+
+/* Form field text contrast */
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: var(--muted-foreground) !important;
+  opacity: 0.8;
+}
+
+/* Label text contrast */
+label {
+  color: var(--foreground);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: 0.875rem;
+}
+
+/* Form field help text */
+.form-text {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  margin-top: 0.375rem;
+}
+
+/* Error state with better contrast */
+.form-error {
+  color: var(--error);
+  font-size: 0.875rem;
+  margin-top: 0.375rem;
+}
+
+input.error,
+textarea.error,
+select.error {
+  border-color: var(--error) !important;
+  background-color: color-mix(in srgb, var(--error) 5%, var(--input-background)) !important;
+}
+
+/* Form group spacing and organization */
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Required field indicator */
+.required::after {
+  content: '*';
+  color: var(--primary);
+  margin-left: 0.25rem;
+}
+
+/* Form section headings */
+.form-section-title {
+  color: var(--foreground);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+/* Form field groups */
+.field-group {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .field-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Checkbox and radio with better contrast */
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--primary);
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-right: 0.5rem;
+}
+
+/* Custom checkbox styling */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  appearance: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 2px solid var(--input-border);
+  border-radius: 0.25rem;
+  background-color: var(--input-background);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.custom-checkbox input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  border: solid var(--primary-foreground);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Enhanced select styling */
+select {
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ffc107' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+}
+
+/* Form button contrast */
+button[type="submit"],
+input[type="submit"] {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  font-weight: 500;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+  background-color: color-mix(in srgb, var(--primary) 90%, black);
+  transform: translateY(-1px);
+}
+
+button[type="submit"]:active,
+input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Disabled state with better contrast */
+input:disabled,
+textarea:disabled,
+select:disabled,
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background-color: color-mix(in srgb, var(--input-background) 80%, black) !important;
+}
+
+/* Form container */
+.form-container {
+  background-color: var(--card-background);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Custom select styling */
+select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23adb5bd' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  appearance: none;
+}
+
+/* Calendar input styling */
+input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-outer-spin-button {
+  filter: invert(1);
+}
+
+/* Enhanced dialog/modal content */
+.dialog-content {
+  background-color: var(--form-background);
+  color: var(--form-foreground);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+/* Form labels */
+label {
+  color: var(--form-foreground);
+  margin-bottom: 0.375rem;
+  display: block;
+  font-weight: 500;
+}
+
+/* Typography enhancements */
+h1,
+h2,
+h3,
+h4 {
+  color: var(--foreground);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p,
+span,
+label {
+  color: var(--foreground);
+}
+
+.text-muted-foreground {
+  color: var(--muted-foreground);
+}
+
+/* Refined button highlight effects */
+.btn-hover-effect:hover {
+  box-shadow: 0 0 0 2px var(--primary);
+  transform: translateY(-1px);
+}
+
+/* Form fields spacing */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Enhanced focus styles */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Enhanced disabled states */
+[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Enhanced text readability */
+p,
+li,
+span {
+  line-height: 1.6;
+}
+
+/* Enhanced card styling */
+[class*="rounded-lg bg-background"] {
+  background-color: var(--card-background);
+  border-color: var(--card-border);
+}
+
+[class*="divide-y"]>* {
+  border-color: var(--divider);
+}
+
+/* Enhanced placeholder text */
+::placeholder {
+  color: var(--muted-foreground) !important;
+  opacity: 0.7;
+}
+
+/* Enhanced transitions */
+*,
+*::before,
+*::after {
+  transition-property: color, background-color, border-color, outline-color, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Disable transitions on page load */
+.preload * {
+  transition: none !important;
+}
+
+/* Element highlighting */
+.highlight-border {
+  border-color: var(--primary) !important;
+}
+
+.highlight-text {
+  color: var(--primary) !important;
+}
+
+/* Better links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Grid layout helpers */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Status badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-primary {
+  background-color: var (--primary);
+  color: var(--primary-foreground);
+}
+
+.badge-secondary {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+/* Better table styling */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 1rem;
+}
+
+th,
+td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+thead th {
+  background-color: var(--card-muted);
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+tbody tr:hover {
+  background-color: var(--hover-background);
+}

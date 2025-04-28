@@ -1,0 +1,220 @@
+
+[Fast Refresh] performing full reload because your application had an unrecoverable error hot-reloader-client.js:141:25
+Removing unpermitted intrinsics lockdown-install.js:1:52832
+Download the React DevTools for a better development experience: https://react.dev/link/react-devtools react-dom-client.development.js:24650
+Fetching next campaign ID... 2 useCampaigns.ts:84:14
+Next campaign ID: 3 useCampaigns.ts:93:16
+Fetching campaign 1... useCampaigns.ts:109:18
+Next campaign ID: 3 useCampaigns.ts:93:16
+Fetching campaign 1... useCampaigns.ts:109:18
+Campaign info received: 
+Object { id: "1", title: "Midterm Elections", description: "This is example election", startTime: "1739898000", endTime: "1739903400", isActive: true, positionCount: "0", candidateCount: "0" }
+useCampaigns.ts:118:18
+Fetching campaign 2... useCampaigns.ts:109:18
+Campaign info received: 
+Object { id: "1", title: "Midterm Elections", description: "This is example election", startTime: "1739898000", endTime: "1739903400", isActive: true, positionCount: "0", candidateCount: "0" }
+useCampaigns.ts:118:18
+Fetching campaign 2... useCampaigns.ts:109:18
+Campaign info received: 
+Object { id: "2", title: "National Election", description: "2025 National Election", startTime: "1739907000", endTime: "1739910600", isActive: true, positionCount: "6", candidateCount: "7" }
+useCampaigns.ts:118:18
+Campaign info received: 
+Object { id: "2", title: "National Election", description: "2025 National Election", startTime: "1739907000", endTime: "1739910600", isActive: true, positionCount: "6", candidateCount: "7" }
+useCampaigns.ts:118:18
+Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks intercept-console-error.ts:40:25
+    error intercept-console-error.ts:40
+    warnInvalidHookAccess react-dom-client.development.js:81
+    useMemo react-dom-client.development.js:23331
+    useMemo React
+    getVoteCounts useVoting.ts:335
+    positionResults page.tsx:29
+    positionResults page.tsx:27
+    updateMemo react-dom-client.development.js:5732
+    useMemo react-dom-client.development.js:22897
+    useMemo React
+    ResultsPage page.tsx:24
+    frame react-dom-client.development.js:23609
+    renderWithHooks react-dom-client.development.js:4645
+    updateFunctionComponent react-dom-client.development.js:8031
+    beginWork react-dom-client.development.js:9688
+    runWithFiberInDEV react-dom-client.development.js:543
+    performUnitOfWork react-dom-client.development.js:15063
+    workLoopSync react-dom-client.development.js:14887
+    renderRootSync react-dom-client.development.js:14867
+    performWorkOnRoot react-dom-client.development.js:14350
+    performWorkOnRootViaSchedulerTask react-dom-client.development.js:15954
+    performWorkUntilDeadline scheduler.development.js:44
+    (Async: EventHandlerNonNull)
+    <anonymous> scheduler.development.js:219
+    <anonymous> scheduler.development.js:364
+    NextJS 4
+    <anonymous> index.js:6
+    NextJS 4
+    <anonymous> react-dom-client.development.js:20941
+    <anonymous> react-dom-client.development.js:24772
+    NextJS 4
+    <anonymous> client.js:37
+    NextJS 4
+    <anonymous> app-index.js:18
+    NextJS 4
+    <anonymous> app-next-dev.ts:7
+    appBootstrap app-bootstrap.ts:61
+    loadScriptsInSequence app-bootstrap.ts:20
+    appBootstrap app-bootstrap.ts:60
+    <anonymous> app-next-dev.ts:6
+    NextJS 7
+React has detected a change in the order of Hooks called by ResultsPage. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useContext                 useContext
+2. useContext                 useContext
+3. useState                   useState
+4. useState                   useState
+5. useState                   useState
+6. useState                   useState
+7. useContext                 useContext
+8. useRef                     useRef
+9. useMemo                    useMemo
+10. useSyncExternalStore      useSyncExternalStore
+11. useEffect                 useEffect
+12. useDebugValue             useDebugValue
+13. useContext                useContext
+14. useContext                useContext
+15. useRef                    useRef
+16. useRef                    useRef
+17. useMemo                   useMemo
+18. useSyncExternalStore      useSyncExternalStore
+19. useEffect                 useEffect
+20. useDebugValue             useDebugValue
+21. useMemo                   useMemo
+22. useSyncExternalStore      useSyncExternalStore
+23. useRef                    useRef
+24. useEffect                 useEffect
+25. useContext                useContext
+26. useContext                useContext
+27. useContext                useContext
+28. useEffect                 useEffect
+29. useState                  useState
+30. useCallback               useCallback
+31. useSyncExternalStore      useSyncExternalStore
+32. useEffect                 useEffect
+33. useContext                useContext
+34. useSyncExternalStore      useSyncExternalStore
+35. useContext                useContext
+36. useRef                    useRef
+37. useRef                    useRef
+38. useMemo                   useMemo
+39. useSyncExternalStore      useSyncExternalStore
+40. useEffect                 useEffect
+41. useDebugValue             useDebugValue
+42. useMemo                   useMemo
+43. useCallback               useCallback
+44. useCallback               useCallback
+45. useEffect                 useEffect
+46. useCallback               useCallback
+47. useCallback               useCallback
+48. useCallback               useCallback
+49. useCallback               useCallback
+50. useCallback               useCallback
+51. useContext                useContext
+52. useRef                    useRef
+53. useRef                    useRef
+54. useMemo                   useMemo
+55. useSyncExternalStore      useSyncExternalStore
+56. useEffect                 useEffect
+57. useDebugValue             useDebugValue
+58. useMemo                   useMemo
+59. useContext                useContext
+60. useRef                    useRef
+61. useMemo                   useMemo
+62. useSyncExternalStore      useSyncExternalStore
+63. useEffect                 useEffect
+64. useDebugValue             useDebugValue
+65. useContext                useContext
+66. useContext                useContext
+67. useRef                    useRef
+68. useRef                    useRef
+69. useMemo                   useMemo
+70. useSyncExternalStore      useSyncExternalStore
+71. useEffect                 useEffect
+72. useDebugValue             useDebugValue
+73. useMemo                   useMemo
+74. useSyncExternalStore      useSyncExternalStore
+75. useRef                    useRef
+76. useEffect                 useEffect
+77. useContext                useContext
+78. useContext                useContext
+79. useContext                useContext
+80. useEffect                 useEffect
+81. useState                  useState
+82. useCallback               useCallback
+83. useSyncExternalStore      useSyncExternalStore
+84. useEffect                 useEffect
+85. useContext                useContext
+86. useSyncExternalStore      useSyncExternalStore
+87. useState                  useState
+88. useState                  useState
+89. useCallback               useCallback
+90. useCallback               useCallback
+91. useCallback               useCallback
+92. useCallback               useCallback
+93. useCallback               useCallback
+94. useCallback               useCallback
+95. useCallback               useCallback
+96. useCallback               useCallback
+97. useCallback               useCallback
+98. useState                  useState
+99. useEffect                 useEffect
+100. useMemo                  useMemo
+101. useEffect                useMemo
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+intercept-console-error.ts:40:25
+Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks intercept-console-error.ts:40:25
+TypeError: prevDeps is undefined
+    areHookInputsEqual webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:4596
+    updateMemo webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:5731
+    useMemo webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23337
+    useMemo React
+    getVoteCounts webpack-internal:///(app-pages-browser)/./src/lib/hooks/useVoting.ts:414
+    positionResults webpack-internal:///(app-pages-browser)/./src/app/campaigns/[id]/results/page.tsx:45
+    positionResults webpack-internal:///(app-pages-browser)/./src/app/campaigns/[id]/results/page.tsx:40
+    updateMemo webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:5733
+    useMemo webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:22898
+    useMemo React
+    ResultsPage webpack-internal:///(app-pages-browser)/./src/app/campaigns/[id]/results/page.tsx:37
+    frame webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23610
+    renderWithHooks webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:4646
+    updateFunctionComponent webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:8032
+    beginWork webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9689
+    runWithFiberInDEV webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:544
+    performUnitOfWork webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15064
+    workLoopSync webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14888
+    renderRootSync webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14868
+    performWorkOnRoot webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14394
+    performWorkOnRootViaSchedulerTask webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15955
+    performWorkUntilDeadline webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:44
+    EventHandlerNonNull* webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:219
+    <anonymous> webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:364
+    NextJS 4
+    <anonymous> webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/index.js:4
+    NextJS 4
+    <anonymous> webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:20942
+    <anonymous> webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:24773
+    NextJS 4
+    <anonymous> webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/client.js:32
+    NextJS 4
+    <anonymous> webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:18
+    NextJS 4
+    <anonymous> webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-next-dev.js:9
+    appBootstrap webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-bootstrap.js:57
+    loadScriptsInSequence webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-bootstrap.js:23
+    appBootstrap webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-bootstrap.js:56
+    <anonymous> webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-next-dev.js:8
+    NextJS 7
+ 
+
+The above error occurred in the <ResultsPage> component. It was handled by the <ReactDevOverlay> error boundary. app-router.ts:52:23
+
+​
+
